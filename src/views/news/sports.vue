@@ -8,12 +8,11 @@
   </div>
   </div>
 
-
 </template>
 <script>
 import newsmenu from '@/components/newsmenu.vue'
 export default{
-    name: 'incidents',
+    name: 'sports',
     components:{
         newsmenu
     },

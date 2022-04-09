@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-   <newsindex />
+    <newsindex />
   </div>
 </template>
 
@@ -11,7 +11,7 @@ import newsindex from '@/views/news/index.vue'
 export default {
   name: 'Home',
   components: {
-   newsindex
+    newsindex
   }
 }
 </script>
