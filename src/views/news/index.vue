@@ -6,8 +6,9 @@
   <h5 class="card-header">{{item.heading}}</h5>
   <div class="card-body">
     <p class="card-text">{{item.description}}</p>
+    {{item.id}}
     <div class="col-lg-2">
-    <a href="#" class="btn btn-primary">Подробне...</a>
+     <router-link class="btn btn-primary"   to="/article/18">Подробнее</router-link> 
   </div>
 </div>
 </div>

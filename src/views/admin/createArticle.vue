@@ -52,6 +52,7 @@ export default {
     data(){
         return{
             artcile:{
+              id: Date(),
                heading: '',
                content: '',
                autor: '',
@@ -64,6 +65,7 @@ export default {
     },
     methods:{
         addArticle(){
+                 
                 this.$store.commit('addArt', this.artcile)
         }
     }
