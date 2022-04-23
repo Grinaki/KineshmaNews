@@ -16,13 +16,14 @@
   <div class="col-md-4">
     <label for="category" class="form-label">Категория</label>
     <select v-model="artcile.category" id="category" class="form-select">
-      <option selected>Выберите категорию...</option>
-      <option>Политика</option>
-      <option>Экономика</option>
-      <option>Общество</option>
-      <option>Проишествия</option>
-      <option>Наука</option>
-      <option>Спорт</option>
+      <option value="0" selected>Выберите категорию...</option>
+      <option value="1" >Политика</option>
+      <option value="2" >Экономика</option>
+      <option value="3" >Общество</option>
+      <option value="4" >Проишествия</option>
+      <option value="5" >Наука</option>
+      <option value="6" >Спорт</option>
+      <option value="7" >Игры</option>
     </select>
   </div>
   <div class="col-md-2">
@@ -52,7 +53,7 @@ export default {
     data(){
         return{
             artcile:{
-              id: Date(),
+              id: '',
                heading: '',
                content: '',
                autor: '',
@@ -67,7 +68,12 @@ export default {
         addArticle(){
                  
                 this.$store.commit('addArt', this.artcile)
+                console.log(this.artcile.id)
+                this.$router.push('/')
         }
+    },
+    mounted(){
+      this.artcile.id = new Date().getTime()
     }
 }
 

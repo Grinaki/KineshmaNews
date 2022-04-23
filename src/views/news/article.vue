@@ -1,14 +1,7 @@
 <template>
 <div class="container">
 <div class="row">
-<h1> Заголовк </h1>
-       {{id}}
-<p>{
-    path: '/histori/:id',
-    components: HistoryId,
-    name: 'historyId',
-    props: true   
-}</p>
+    {{Art}}
 
   <p> autor </p>
 
@@ -18,6 +11,16 @@
 <script>
 export default {
     name: 'article',
-    props:['id']
+    Data(){
+      return{
+            article:''
+      }
+    },
+    props:['id'],
+    computed:{
+       Art(){
+            return   this.$store.getters.getItemArt(this.id)
+       }
+    }
 }
 </script>

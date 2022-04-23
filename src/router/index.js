@@ -7,6 +7,7 @@ import incidents from '@/views/news/incidents.vue'
 import piple from '@/views/news/piple.vue'
 import science from '@/views/news/science.vue'
 import sports from '@/views/news/sports.vue'
+import games from '@/views/news/games.vue'
 import createArticle from '@/views/admin/createArticle.vue'
 import article from '@/views/news/article.vue'
 const routes = [
@@ -50,6 +51,11 @@ const routes = [
     path: '/sports',
     name: '/sports',
     component: sports
+  },
+  {
+    path: '/games',
+    name: 'games',
+    component: games
   },
   {
     path: '/admin/create',

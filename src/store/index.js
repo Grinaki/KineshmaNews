@@ -33,8 +33,18 @@ export default createStore({
   getters:{
       getArticle: state => {
         return state.article
+      },
+      getItemArt: state => (id) => {
+        console.log(id)
+       /* for (let i = 0; i < state.article.lenght; i++){
+          console.log(state.article[i].id)
+          if(state.article[i].id == id){
+            return state.article[i]
+          }
+        } */
+        return state.article.find(art => art.id == id)
       }
-  },
-  modules: {
   }
-})
+
+}
+)

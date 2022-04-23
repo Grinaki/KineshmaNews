@@ -4,7 +4,7 @@
   <h5 class="card-header">{{item.heading}}</h5>
   <div class="card-body">
     <p class="card-text">{{item.description}}</p>
-    <a href="#" class="btn btn-primary">Подробне...</a>
+    <router-link class="btn btn-primary"   :to="{name: 'article', params:{id: item.id }}">Подробнее...</router-link> 
   </div>
   </div>
 
